@@ -1,0 +1,105 @@
+.logo{
+  align-items: center;
+    background: #171d29;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: 64px;
+    padding: 0 1.5rem;
+    white-space: nowrap;
+    width: 100%;
+  img{
+    width: 1.5rem;
+  }
+  h2{
+    padding-left: 1rem;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+  }
+}
+
+.home-page{
+  margin-right: 1rem;
+  width: 26px;
+}
+.mat-icon{
+  vertical-align: center;
+  margin-right: 1rem;
+  color: #494B74;
+  // color: rgb(99, 102, 241);
+  font-size: 22px;
+  height: 22px;
+  width: 22px;
+}
+
+.mat-divider{
+
+  border-color: transparent;
+  height: 30px;
+}
+
+.mat-list-item{
+  display: flex;
+    flex-direction: row;
+  min-height: 48px;
+  align-items: center;
+
+
+
+  margin-bottom: 4px;
+
+  ::ng-deep{
+    .mat-list-item-content{
+      padding: 0.5rem 1.5rem !important;
+      &:hover{
+        background: #141924;
+      }
+    }
+  }
+}
+
+.list-item-active{
+  color: #fff;
+  ::ng-deep{
+    .mat-list-item-content{
+      background: #141924;
+      &:hover{
+        background:#141924;
+      }
+
+      h4{
+        color: #fff;
+      }
+      .mat-icon{
+        color: rgb(99, 102, 241);
+      }
+    }
+  }
+}
+
+.mat-subheader{
+  white-space: nowrap;
+  font-weight: 600;
+  color: #6b6e7f;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif  ;
+  margin-top: 50px !important;
+  padding: 0.75rem 1.5rem;
+}
+
+
+h4{
+  font-family: 'Inter', sans-serif !important  ;
+  margin: 0;
+  font-weight: 500;
+  color: #A1A2B6;
+  font-size: 0.875rem;
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mat-list-base{
+  padding-top: 0;
+}
