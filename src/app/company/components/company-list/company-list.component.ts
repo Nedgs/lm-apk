@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { CompanyService } from '../../services/company.service';
 
 @Component({
   selector: 'app-company-list',
@@ -7,9 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompanyListComponent implements OnInit {
 
-  constructor() { }
+  displayedColumns : string[] = ['date', 'ref', 'cat', 'nom', 'stock', 'pamp', 'val_stock', 'action'];
+  dataSource!:MatTableDataSource<any>;
+
+  @ViewChild('paginator') paginator! : MatPaginator;
+  @ViewChild(MatSort) matSort! : MatSort;
+
+  constructor(private productsService: CompanyService) { }
 
   ngOnInit(): void {
+    this.productsService.getListProducts().subscribe((response:any) => {
+      this.dataSource = new MatTableDataSource(response);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.matSort;
+
+
+    });
+
   }
 
+  filterData($event : any){
+    this.dataSource.filter = $event.target.value;
+  }
 }

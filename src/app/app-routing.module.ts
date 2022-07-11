@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/components/dashboard/dashboard.component';
-
 
 
 const routes: Routes = [
@@ -19,9 +17,9 @@ const routes: Routes = [
     loadChildren: () => import('./company/company.module')
       .then(m => m.CompanyModule)
   },
-  {
-    path: '**', pathMatch: 'full', component: DashboardComponent
-  }
+  // {
+  //   path: '**', pathMatch: 'full', component: DashboardComponent
+  // }
 
 ];
 

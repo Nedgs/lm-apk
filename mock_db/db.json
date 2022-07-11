@@ -1,0 +1,97 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "date": "18Oct 2021",
+        "ref": "00000001",
+        "cat": "Fruit",
+        "nom": "Pomme",
+        "stock": 5,
+        "pamp": 5,
+        "val_stock": 5
+  
+      },
+      {
+        "id":2,
+        "date": "20 Oct 2021",
+        "ref": "00000001",
+        "cat": "Fruit",
+        "nom": "Pomme",
+        "stock": 5,
+        "pamp": 5,
+        "val_stock": 5
+  
+      },
+      {
+        "id":3,
+        "date": "28 Sep 2021",
+        "ref": "00000001",
+        "cat": "Fruit",
+        "nom": "Pomme",
+        "stock": 5,
+        "pamp": 5,
+        "val_stock": 5
+  
+      },
+      {
+        "id":4,
+        "date": "28 Oct 2021",
+        "ref": "00000001",
+        "cat": "Fruit",
+        "nom": "Pomme",
+        "stock": 5,
+        "pamp": 5,
+        "val_stock": 5
+  
+      },
+      {
+        "id":5,
+        "date": "19 Oct 2021",
+        "ref": "00000001",
+        "cat": "Fruit",
+        "nom": "Pomme",
+        "stock": 5,
+        "pamp": 5,
+        "val_stock": 5
+  
+      },
+      {
+        "id":6,
+        "date": "19 Oct 2021",
+        "ref": "00000001",
+        "cat": "Fruit",
+        "nom": "Pomme",
+        "stock": 5,
+        "pamp": 5,
+        "val_stock": 5
+  
+      },
+      {
+        "id":7,
+        "date": "19 Oct 2021",
+        "ref": "00000001",
+        "cat": "Heho",
+        "nom": "Pomme",
+        "stock": 5,
+        "pamp": 5,
+        "val_stock": 5
+  
+      },
+      {
+        "id":8,
+        "date": "19 Oct 2021",
+        "ref": "00000001",
+        "cat": "Legumes",
+        "nom": "Pomme",
+        "stock": 5,
+        "pamp": 5,
+        "val_stock": 5
+  
+      }
+  
+  
+    ]
+  }
+  
+  
+  
