@@ -1,1 +1,75 @@
-<p>data-table works!</p>
+<div class="container-txt">
+    <div class="search-add-container">
+      <h1>Produits</h1>
+      <div class="searbox">
+          <mat-icon class="material-symbols-outlined search">search</mat-icon>
+          <input matInput class="search-input" placeholder="Recherche..." autocomplete="off" (keyup)="filterData($event)">
+      </div>
+    </div>
+    
+    <div class="add-btn-container">
+      <button class="add-button">
+          <mat-icon class="add">add</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <table class=" table"  mat-table matSort  [dataSource]="dataSource">
+
+
+    <ng-container matColumnDef="date">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ref">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Ref </th>
+      <td mat-cell *matCellDef="let element"> {{element.ref}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cat">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Catégorie </th>
+      <td mat-cell *matCellDef="let element"> {{element.cat}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nom">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Nom </th>
+      <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="stock">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Stock </th>
+      <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="pamp">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> PAMP </th>
+      <td mat-cell *matCellDef="let element"> {{element.pamp}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="val_stock">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Val stock </th>
+      <td mat-cell *matCellDef="let element"> {{element.val_stock}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button >
+          <mat-icon class="mouv">swap_horizontal_circle</mat-icon>
+        </button>
+        <button mat-icon-button >
+          <mat-icon class="edit">border_color</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon class="delete">delete</mat-icon>
+        </button>
+
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+  <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>

@@ -8,8 +8,8 @@ import { MaterialModule } from './shared/material/material.module';
 import { CoreModule } from './core/core.module';
 import { registerLocaleData } from '@angular/common';
 import { DatePipe } from '@angular/common';
-import { DataTableComponent } from './shared/components/data-table/data-table.component'
 import { HttpClientModule } from '@angular/common/http';
+import { ContactListComponent } from './contacts/components/contact-list/contact-list.component';
 
 
 
@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    DataTableComponent,
+    ContactListComponent,
 
 
   ],
