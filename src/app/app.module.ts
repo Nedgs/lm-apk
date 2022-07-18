@@ -7,7 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { CoreModule } from './core/core.module';
 import { registerLocaleData } from '@angular/common';
-import { DatePipe } from '@angular/common'
+import { DatePipe } from '@angular/common';
+import { DataTableComponent } from './shared/components/data-table/data-table.component'
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,6 +17,7 @@ import { DatePipe } from '@angular/common'
 @NgModule({
   declarations: [
     AppComponent,
+    DataTableComponent,
 
 
   ],
@@ -23,7 +26,8 @@ import { DatePipe } from '@angular/common'
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    CoreModule
+    CoreModule,
+    HttpClientModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'fr-FR' }, DatePipe],
   bootstrap: [AppComponent]
