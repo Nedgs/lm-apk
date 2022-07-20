@@ -9,7 +9,6 @@ import { CoreModule } from './core/core.module';
 import { registerLocaleData } from '@angular/common';
 import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ContactListComponent } from './contacts/components/contact-list/contact-list.component';
 
 
 
@@ -17,7 +16,7 @@ import { ContactListComponent } from './contacts/components/contact-list/contact
 @NgModule({
   declarations: [
     AppComponent,
-    ContactListComponent,
+    
 
 
   ],

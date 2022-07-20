@@ -1,93 +1,29 @@
 {
     "products": [
       {
-        "id": 1,
-        "date": "18Oct 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
+        "name": "ZEN NET",
+        "owner": "Antoine Moisan",
+        "date": "11 juil.2022",
+        "phone": "0784523963",
+        "city": "SAINT-SEBASTIEN-SUR-LOIRE",
+        "country": "France",
+        "sector": "5"
+        
   
-      },
+      },  
       {
-        "id":2,
-        "date": "20 Oct 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":3,
-        "date": "28 Sep 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":4,
-        "date": "28 Oct 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":5,
-        "date": "19 Oct 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":6,
-        "date": "19 Oct 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":7,
-        "date": "19 Oct 2021",
-        "ref": "00000001",
-        "cat": "Heho",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":8,
-        "date": "19 Oct 2021",
-        "ref": "00000001",
-        "cat": "Legumes",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
+        "name": "AEN NET",
+        "owner": "Nader Gouasmi",
+        "date": "11 juin.2022",
+        "phone": "0454523963",
+        "city": "Long champs",
+        "country": "France",
+        "sector": "5"
+        
   
       }
+      
+      
   
   
     ]
