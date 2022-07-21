@@ -63,6 +63,120 @@ h1, h2, h3 {
   background-color: #ebebee;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
+}
+
+
+
+
+
+
+.table{
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-width: 500px;
+ 
+  width: 100%;
+  border-spacing: 0px;
+  color: #212529;
+  // border-top: 1px solid #dee2e6;
+  // border-right: 1px solid #dee2e6;
+  // border-left: 1px solid #dee2e6;
+
+
+  thead{
+    width: 100%;
+    tr{
+      width: 100%;
+      th{
+        padding: 0.75rem;
+        vertical-align: bottom;
+        border-bottom: 1px solid #dee2e6;
+        border-top: 1px solid #dee2e6;
+        background: #fff;
+        text-align: start;
+        color: #7D9EB5 !important;
+
+
+
+      }
+
+      th:first-child{
+        border-left: 1px solid #dee2e6 !important;
+      }
+
+      th:last-child{
+        border-right: 1px solid #dee2e6 !important;
+      }
+
+
+      }
+  }
+
+  tbody{
+
+    tr{
+
+      td{
+        padding: 0.75rem;
+        vertical-align: bottom;
+        border-bottom: 1px solid #dee2e6;
+
+        background: #fff;
+        text-align: start;
+      }
+
+      td:first-child{
+        border-left: 1px solid #dee2e6 !important;
+      }
+
+      td:last-child{
+        border-right: 1px solid #dee2e6 !important;
+      }
+    }
+  }
+
+}
+
+.mat-paginator-container{
+  min-height: 76px;
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.action{
+  display: flex;
+  align-items: center;
+
+  mat-icon:not(:nth-child(3)){
+    padding-right: 10px;
+  }
+
+
+}
+
+th.mat-header-cell:last-of-type{
+  padding-right: 0px;
+}
+
+.mat-header-cell{
+  text-align: start;
+  color: #7D9EB5 !important;
+  font-size: 14px;
+  font-weight: 600;
+}
+.mouv{
+  color: #FF9931;
+}
+.edit{
+  color: rgb(0 188 212);
+}
+.delete{
+  color: #C03232;
 }
 
 
@@ -74,8 +188,7 @@ h1, h2, h3 {
   h1{
     font-size: 24px;
     font-weight: 500;
-    padding-right: 1rem;
-    margin-right: 1rem;
+    padding-right: 2rem;
     margin: 0;
   }
 
@@ -139,117 +252,3 @@ h1, h2, h3 {
       margin-top: 2px;
     }
 }
-
-
-.table{
-
-  overflow-x: auto;
-  overflow-y: hidden;
-  min-width: 500px;
- 
-  width: 100%;
-  border-spacing: 0px;
-  color: #212529;
-  border-top: 1px solid #dee2e6;
-  border-right: 1px solid #dee2e6;
-  border-left: 1px solid #dee2e6;
-
-
-  thead{
-    width: 100%;
-    tr{
-      width: 100%;
-      th{
-        padding: 0.75rem;
-        vertical-align: bottom;
-        border-bottom: 1px solid #dee2e6;
-        border-top: 1px solid #dee2e6;
-        background: #fff;
-        text-align: start;
-        color: #7D9EB5 !important;
-
-
-
-      }
-
-      th:first-child{
-        border-left: 1px solid #dee2e6 !important;
-      }
-
-      th:last-child{
-        border-right: 1px solid #dee2e6 !important;
-      }
-
-
-      }
-  }
-
-  tbody{
-
-    tr{
-
-      td{
-        padding: 0.75rem;
-        vertical-align: bottom;
-        border-bottom: 1px solid #dee2e6;
-
-        background: #fff;
-        text-align: start;
-      }
-
-      td:first-child{
-        border-left: 1px solid #dee2e6 !important;
-      }
-
-      td:last-child{
-        border-right: 1px solid #dee2e6 !important;
-      }
-    }
-  }
-
-}
-
-.action{
-  display: flex;
-  align-items: center;
-
-  mat-icon:not(:nth-child(3)){
-    padding-right: 10px;
-  }
-
-
-}
-
-th.mat-header-cell:last-of-type{
-  padding-right: 0px;
-}
-
-.mat-header-cell{
-  text-align: start;
-  color: #7D9EB5 !important;
-  font-size: 14px;
-  font-weight: 600;
-}
-.mouv{
-  color: #FF9931;
-}
-.edit{
-  color: #11A1FD;
-}
-.delete{
-  color: #C03232;
-}
-
-// table {
-//     width: 100%;
-//     overflow-x: auto;
-//     overflow-y: hidden;
-//     min-width: 500px;
-// }
-// th.mat-header-cell {
-//     text-align: left;
-//     max-width: 300px;
-// }
-
-
-/* Importing Bootstrap SCSS file. */

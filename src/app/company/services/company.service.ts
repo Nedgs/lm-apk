@@ -20,12 +20,9 @@ export class CompanyService {
 
   }
 
-  getListProducts() {
+  getListCompanys() {
 
-    return this.http.get('http://localhost:3000/products')
-    // this.http.get<Product[]>('http://localhost:3000/products')
-    //   .subscribe({
-    //     next: (products) => this.list.next(products)
-    //   });
+    return this.http.get('http://localhost:3000/companys')
+   
   }
 }

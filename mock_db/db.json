@@ -1,93 +1,263 @@
 {
-    "products": [
+    "companys": [
       {
-        "id": 1,
-        "date": "18Oct 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":2,
-        "date": "20 Oct 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":3,
-        "date": "28 Sep 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":4,
-        "date": "28 Oct 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":5,
-        "date": "19 Oct 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":6,
-        "date": "19 Oct 2021",
-        "ref": "00000001",
-        "cat": "Fruit",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":7,
-        "date": "19 Oct 2021",
-        "ref": "00000001",
-        "cat": "Heho",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
-      },
-      {
-        "id":8,
-        "date": "19 Oct 2021",
-        "ref": "00000001",
-        "cat": "Legumes",
-        "nom": "Pomme",
-        "stock": 5,
-        "pamp": 5,
-        "val_stock": 5
-  
+        "name": "Vipe",
+        "owner": "econnal0",
+        "date": "12/20/2021",
+        "phone": "530-174-9362",
+        "city": "Périgueux",
+        "country": "France",
+        "sector": "Glass"
+      }, {
+        "name": "Zooveo",
+        "owner": "mboules1",
+        "date": "8/15/2021",
+        "phone": "397-988-9765",
+        "city": "Montpellier",
+        "country": "France",
+        "sector": "Plastic"
+      }, {
+        "name": "Thoughtstorm",
+        "owner": "rbreeze2",
+        "date": "2/21/2022",
+        "phone": "684-382-5938",
+        "city": "Douarnenez",
+        "country": "France",
+        "sector": "Steel"
+      }, {
+        "name": "Realcube",
+        "owner": "missatt3",
+        "date": "7/18/2022",
+        "phone": "136-463-1215",
+        "city": "Avignon",
+        "country": "France",
+        "sector": "Brass"
+      }, {
+        "name": "Tavu",
+        "owner": "dlynn4",
+        "date": "12/18/2021",
+        "phone": "942-611-4369",
+        "city": "Moissy-Cramayel",
+        "country": "France",
+        "sector": "Vinyl"
+      }, {
+        "name": "Ooba",
+        "owner": "mcopozio5",
+        "date": "5/2/2022",
+        "phone": "264-705-9413",
+        "city": "Paris 11",
+        "country": "France",
+        "sector": "Granite"
+      }, {
+        "name": "Voonte",
+        "owner": "rcluet6",
+        "date": "9/5/2021",
+        "phone": "575-182-1773",
+        "city": "Marne-la-Vallée",
+        "country": "France",
+        "sector": "Wood"
+      }, {
+        "name": "Flashspan",
+        "owner": "bschneidar7",
+        "date": "2/26/2022",
+        "phone": "106-266-1237",
+        "city": "Paris La Défense",
+        "country": "France",
+        "sector": "Aluminum"
+      }, {
+        "name": "Reallinks",
+        "owner": "plangelaan8",
+        "date": "3/12/2022",
+        "phone": "162-248-1547",
+        "city": "Toulouse",
+        "country": "France",
+        "sector": "Plexiglass"
+      }, {
+        "name": "Riffpedia",
+        "owner": "kbulch9",
+        "date": "1/25/2022",
+        "phone": "632-767-1024",
+        "city": "Clermont-Ferrand",
+        "country": "France",
+        "sector": "Plexiglass"
+      }, {
+        "name": "Aibox",
+        "owner": "fardrona",
+        "date": "11/23/2021",
+        "phone": "852-299-9597",
+        "city": "Troyes",
+        "country": "France",
+        "sector": "Stone"
+      }, {
+        "name": "Devpulse",
+        "owner": "gtintonb",
+        "date": "1/14/2022",
+        "phone": "654-841-7675",
+        "city": "Lyon",
+        "country": "France",
+        "sector": "Wood"
+      }, {
+        "name": "Eayo",
+        "owner": "overricoc",
+        "date": "4/21/2022",
+        "phone": "244-641-2526",
+        "city": "Bourges",
+        "country": "France",
+        "sector": "Granite"
+      }, {
+        "name": "Ozu",
+        "owner": "nkimburyd",
+        "date": "8/1/2021",
+        "phone": "539-784-7301",
+        "city": "Villejuif",
+        "country": "France",
+        "sector": "Brass"
+      }, {
+        "name": "Gigazoom",
+        "owner": "bhaccletone",
+        "date": "2/11/2022",
+        "phone": "996-264-7773",
+        "city": "Marne-la-Vallée",
+        "country": "France",
+        "sector": "Granite"
+      }, {
+        "name": "Ailane",
+        "owner": "vsyslandf",
+        "date": "6/21/2022",
+        "phone": "668-224-5639",
+        "city": "Créteil",
+        "country": "France",
+        "sector": "Plastic"
+      }, {
+        "name": "Edgetag",
+        "owner": "bsimnelg",
+        "date": "7/15/2022",
+        "phone": "721-220-4050",
+        "city": "Lomme",
+        "country": "France",
+        "sector": "Plexiglass"
+      }, {
+        "name": "Bluezoom",
+        "owner": "npiotrowskih",
+        "date": "9/13/2021",
+        "phone": "732-248-0684",
+        "city": "Lyon",
+        "country": "France",
+        "sector": "Granite"
+      }, {
+        "name": "Tagchat",
+        "owner": "jdeavesi",
+        "date": "3/25/2022",
+        "phone": "500-387-0506",
+        "city": "Alençon",
+        "country": "France",
+        "sector": "Glass"
+      }, {
+        "name": "Photolist",
+        "owner": "kantukj",
+        "date": "5/31/2022",
+        "phone": "311-895-9170",
+        "city": "Dunkerque",
+        "country": "France",
+        "sector": "Brass"
+      }, {
+        "name": "Leenti",
+        "owner": "sramesk",
+        "date": "12/4/2021",
+        "phone": "405-404-3526",
+        "city": "Montluçon",
+        "country": "France",
+        "sector": "Glass"
+      }, {
+        "name": "InnoZ",
+        "owner": "sburnyatel",
+        "date": "1/29/2022",
+        "phone": "792-928-0004",
+        "city": "Périgueux",
+        "country": "France",
+        "sector": "Wood"
+      }, {
+        "name": "Trudoo",
+        "owner": "mdragoem",
+        "date": "11/22/2021",
+        "phone": "693-650-9433",
+        "city": "Roanne",
+        "country": "France",
+        "sector": "Stone"
+      }, {
+        "name": "Fliptune",
+        "owner": "zeasemann",
+        "date": "9/26/2021",
+        "phone": "480-758-5050",
+        "city": "Montpellier",
+        "country": "France",
+        "sector": "Vinyl"
+      }, {
+        "name": "Yodel",
+        "owner": "hcroshamo",
+        "date": "10/16/2021",
+        "phone": "656-151-2595",
+        "city": "La Rochelle",
+        "country": "France",
+        "sector": "Wood"
+      }, {
+        "name": "Edgeclub",
+        "owner": "hambrogionip",
+        "date": "5/13/2022",
+        "phone": "902-112-6475",
+        "city": "Toulouse",
+        "country": "France",
+        "sector": "Plastic"
+      }, {
+        "name": "Wordware",
+        "owner": "braglesq",
+        "date": "3/28/2022",
+        "phone": "137-102-2540",
+        "city": "Aubagne",
+        "country": "France",
+        "sector": "Vinyl"
+      }, {
+        "name": "Zazio",
+        "owner": "ttregennar",
+        "date": "10/9/2021",
+        "phone": "605-523-5389",
+        "city": "Nantes",
+        "country": "France",
+        "sector": "Aluminum"
+      }, {
+        "name": "Flashpoint",
+        "owner": "amackenzies",
+        "date": "7/8/2022",
+        "phone": "272-979-4270",
+        "city": "Mayenne",
+        "country": "France",
+        "sector": "Plexiglass"
+      }, {
+        "name": "Agivu",
+        "owner": "bcovingtont",
+        "date": "3/15/2022",
+        "phone": "645-129-4193",
+        "city": "Chambéry",
+        "country": "France",
+        "sector": "Plastic"
+      }, {
+        "name": "Skyvu",
+        "owner": "gtiddu",
+        "date": "2/20/2022",
+        "phone": "473-357-2494",
+        "city": "Marseille",
+        "country": "France",
+        "sector": "Rubber"
+      }, {
+        "name": "Gabcube",
+        "owner": "icordierv",
+        "date": "8/13/2021",
+        "phone": "919-897-7977",
+        "city": "Paris La Défense",
+        "country": "France",
+        "sector": "Glass"
       }
+      
   
   
     ]

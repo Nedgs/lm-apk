@@ -13,9 +13,14 @@ const routes: Routes = [
       .then(m => m.DashboardModule)
   },
   {
-    path: 'company',
+    path: 'companys',
     loadChildren: () => import('./company/company.module')
       .then(m => m.CompanyModule)
+  },
+  {
+    path: 'contacts',
+    loadChildren: () => import('./contacts/contact.module')
+      .then(m => m.ContactModule)
   },
   // {
   //   path: '**', pathMatch: 'full', component: DashboardComponent
