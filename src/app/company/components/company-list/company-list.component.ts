@@ -33,4 +33,5 @@ export class CompanyListComponent implements OnInit {
   filterData($event : any){
     this.dataSource.filter = $event.target.value;
   }
+  
 }

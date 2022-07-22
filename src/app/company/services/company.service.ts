@@ -25,4 +25,12 @@ export class CompanyService {
     return this.http.get('http://localhost:3000/companys')
    
   }
+
+  create(company: Company): Observable<Company> {
+    return this.http.post<Company>(`http://localhost:3000/companys`, company);
+  }
+
+  deleteItemById(id: number): Observable<void> {
+    return this.http.delete<void>(`http://localhost:3000/companys` + '/' + id);
+  }
 }
