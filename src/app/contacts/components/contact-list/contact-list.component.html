@@ -1,7 +1,7 @@
 <section class="section-container">
     <div class="container-txt">
       <div class="search-add-container">
-        <h1>Entreprises</h1>
+        <h1>Contacts</h1>
         <div class="searbox">
             <mat-icon class="material-symbols-outlined search">search</mat-icon>
             <input matInput class="search-input" placeholder="Recherche..." autocomplete="off" (keyup)="filterData($event)">
@@ -18,19 +18,14 @@
     <table class=" table"  mat-table matSort  [dataSource]="dataSource">
   
   
-      <ng-container matColumnDef="entreprise">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Entreprise</th>
+      <ng-container matColumnDef="nom">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Nom</th>
         <td mat-cell *matCellDef="let element"> {{element.name}} </td>
       </ng-container>
   
-      <ng-container matColumnDef="proprietaire">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Propriétaire</th>
-        <td mat-cell *matCellDef="let element"> {{element.owner}} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="date">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Date de création</th>
-        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+      <ng-container matColumnDef="email">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Email</th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
       </ng-container>
   
       <ng-container matColumnDef="telephone">
@@ -38,19 +33,24 @@
         <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
       </ng-container>
   
-      <ng-container matColumnDef="ville">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Ville</th>
-        <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+      <ng-container matColumnDef="proprietaire">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Propriétaire</th>
+        <td mat-cell *matCellDef="let element"> {{element.owner}} </td>
       </ng-container>
   
-      <ng-container matColumnDef="pays">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Pays/Région</th>
-        <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+      <ng-container matColumnDef="entreprise">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Entreprise</th>
+        <td mat-cell *matCellDef="let element"> {{element.company}} </td>
       </ng-container>
   
-      <ng-container matColumnDef="secteur">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Secteur d'activité</th>
-        <td mat-cell *matCellDef="let element"> {{element.sector}} </td>
+      <ng-container matColumnDef="date">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Date de création</th>
+        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cyclevie">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Cycle de vie</th>
+        <td mat-cell *matCellDef="let element"> {{element.lifeCycle}} </td>
       </ng-container>
   
       <ng-container matColumnDef="action">
