@@ -2,8 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { CompanyService } from 'src/app/company/services/company.service';
-
+import { ContactsService } from '../../services/contacts.service';
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
@@ -11,16 +10,16 @@ import { CompanyService } from 'src/app/company/services/company.service';
 })
 export class ContactListComponent implements OnInit {
 
-  displayedColumns : string[] = ['entreprise', 'proprietaire', 'date', 'telephone', 'ville', 'pays', 'secteur', 'action'];
+  displayedColumns : string[] = ['nom', 'email', 'telephone' ,'proprietaire', 'entreprise', 'date', 'cyclevie', 'action'];
   dataSource!:MatTableDataSource<any>;
 
   @ViewChild('paginator') paginator! : MatPaginator;
   @ViewChild(MatSort) matSort! : MatSort;
 
-  constructor(private companyService: CompanyService) { }
+  constructor(private contactsService: ContactsService) { }
 
   ngOnInit(): void {
-    this.companyService.getListCompanys().subscribe((response:any) => {
+    this.contactsService.getListContacts().subscribe((response:any) => {
       this.dataSource = new MatTableDataSource(response);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.matSort;
