@@ -3,12 +3,12 @@
 export interface Company {
     id: number | null;
     name: string | null;
-    owner: string;
-    date: string;
-    phone: string;
-    city: string;
-    country: string;
-    sector: string;
+    owner: string | null;
+    date: string | null;
+    phone: string | null;
+    city: string | null;
+    country: string | null;
+    sector: string | null;
   
   }
   
