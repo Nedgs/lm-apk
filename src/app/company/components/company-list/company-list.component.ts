@@ -11,7 +11,7 @@ import { CompanyService } from '../../services/company.service';
 })
 export class CompanyListComponent implements OnInit {
 
-  displayedColumns : string[] = ['entreprise', 'proprietaire', 'date', 'telephone', 'ville', 'pays', 'secteur', 'action'];
+  displayedColumns : string[] = ['entreprise', 'date', 'telephone', 'ville', 'action'];
   dataSource!:MatTableDataSource<any>;
 
   @ViewChild('paginator') paginator! : MatPaginator;

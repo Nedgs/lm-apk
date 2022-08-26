@@ -23,14 +23,14 @@
         <td mat-cell *matCellDef="let element"> {{element.name}} </td>
       </ng-container>
   
-      <ng-container matColumnDef="proprietaire">
+      <!-- <ng-container matColumnDef="proprietaire">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Propriétaire</th>
         <td mat-cell *matCellDef="let element"> {{element.owner}} </td>
-      </ng-container>
+      </ng-container> -->
   
       <ng-container matColumnDef="date">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Date de création</th>
-        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.createdAt | date:'dd/MM/yyyy' }} </td>
       </ng-container>
   
       <ng-container matColumnDef="telephone">
@@ -40,10 +40,10 @@
   
       <ng-container matColumnDef="ville">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Ville</th>
-        <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.city.name}} </td>
       </ng-container>
   
-      <ng-container matColumnDef="pays">
+      <!-- <ng-container matColumnDef="pays">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Pays/Région</th>
         <td mat-cell *matCellDef="let element"> {{element.country}} </td>
       </ng-container>
@@ -51,7 +51,7 @@
       <ng-container matColumnDef="secteur">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Secteur d'activité</th>
         <td mat-cell *matCellDef="let element"> {{element.sector}} </td>
-      </ng-container>
+      </ng-container> -->
   
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef> Action </th>
