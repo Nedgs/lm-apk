@@ -1,14 +1,15 @@
+import { City } from "./city";
 
 
-export interface Company {
-    id: number | null;
-    name: string | null;
-    owner: string | null;
-    date: string | null;
-    phone: string | null;
-    city: string | null;
-    country: string | null;
-    sector: string | null;
+export class Company {
+    id! : number;
+    name! : string;
+    // owner: string | null;
+    createdAt! : Date | null;
+    phone! : string | null;
+    city! : City;
+    // country: string | null;
+    // sector: string | null;
   
   }
   
