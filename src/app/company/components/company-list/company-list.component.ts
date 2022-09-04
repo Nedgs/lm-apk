@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Company } from 'src/app/shared/models/company';
 import { CompanyService } from '../../services/company.service';
 
 @Component({
@@ -17,6 +18,8 @@ export class CompanyListComponent implements OnInit {
   @ViewChild('paginator') paginator! : MatPaginator;
   @ViewChild(MatSort) matSort! : MatSort;
 
+  companys?: any;
+
   constructor(private companysService: CompanyService) { }
 
   ngOnInit(): void {
@@ -28,10 +31,27 @@ export class CompanyListComponent implements OnInit {
 
     });
 
+    this.refreshCompanys();
+
   }
 
-  filterData($event : any){
+  filterData($event: any){
     this.dataSource.filter = $event.target.value;
   }
-  
+
+  refreshCompanys(){
+    this.companysService.getListCompanys().subscribe((response:any) => {
+      this.dataSource = new MatTableDataSource(response);
+      });
+  }
+
+  deleteCompany(id: number){
+    let conf = confirm("Êtes vous sûrs ?");
+    if (conf){
+      this.companysService.deleteItemById(id).subscribe(() => {
+        console.log("Entreprise supprimé");
+        this.refreshCompanys();
+      })
+    }
+  } 
 }

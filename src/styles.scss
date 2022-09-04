@@ -252,3 +252,63 @@ th.mat-header-cell:last-of-type{
       margin-top: 2px;
     }
 }
+
+
+// formulaire
+.container-form{
+  padding: 0 20px;
+  margin-top: 50px;
+
+  .form-general{
+    display: block;
+
+    .input-container{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+
+      label{
+        color: #000;
+        font-weight: 500;
+      }
+
+      input{
+        border: 1px solid #dee2e6;
+        height: 40px;
+        border-radius: 4px;
+        margin-top: 4px;
+        max-width: 80%;
+      }
+
+      input:focus-visible{
+        outline: none;
+      }
+    }
+
+    .button-container{
+      width: 80%;
+      display: flex;
+      justify-content: end;
+
+      .back{
+        background-color: #C03232;
+        color: #fff;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 4px;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+
+      .validate{
+        background-color: #0AB39C;
+        color: #fff;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+      }
+    }
+  }
+}

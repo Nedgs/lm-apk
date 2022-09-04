@@ -1,41 +1,29 @@
-<div class="container">
+<div class="container-form">
   <div>
-      <h2>Ajouter un Produit :</h2>
+      <h2>Ajouter une entreprise</h2>
   </div>
-  <form>
-      <div hidden class="col-sm-2 col-md-2 col-lg-2">
-          <label>ID Produit</label>
-          <input type="text" [(ngModel)]="newCompany.id" name="id" class="form-control">
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-4">
-          <label>Nom Produit</label>
-          <input type="text" [(ngModel)]="newCompany.name" name="name" class="form-control">
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-4">
-          <label>Date création</label>
-          <input type="date" [(ngModel)]="newCompany.createdAt" name="createdAt" class="form-control">
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-4">
+  <form [formGroup]="addCompanyForm" action="POST" class="form-general">
+
+    <div class="input-container">
+        <label>Nom de l’entreprise</label>
+        <input formControlName="name" type="text" class="input-add-menu">
+    </div>
+
+    <div class="input-container">
         <label>Téléphone</label>
-        <input type="text" [(ngModel)]="newCompany.phone" name="phone" class="form-control">
-      </div>
+        <input formControlName="phone" type="text" class="input-add-menu">
+    </div>
 
-      <!-- <div class="col-sm-4 col-md-4 col-lg-4">
+    <div class="input-container">
         <label>Ville</label>
-        <input type="text" id="city" name="city" [(ngModel)]="newCity.name" name="city" class="form-control">
-      </div> -->
+        <input formControlName="city" type="text" class="input-add-menu">
+    </div>
 
-       <!-- <div class="col-sm-4 col-md-4 col-lg-4">
-          <label>Categorie</label>
-          <select class="form-control form-control-lg" id="idCat" name="idCat" [(ngModel)]="newIdCat">
-              <option *ngFor="let cat of categories" [value]="cat.idCat">
-                  {{cat.nomCat}}
-              </option>
-          </select>
-      </div>  -->
-      <div class="mt-2">
-          <button type="submit" (click)="addCompany()" class="btn btn-success">Ajouter</button>
-      </div>
+    <div class="button-container">
+        <button  class="btn btn-add-menu back">Retour</button>
+        <button (click)="addCompany()" class="btn btn-add-menu validate">Valider</button>
+    </div>
+
   </form>
 </div>
 

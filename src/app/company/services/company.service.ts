@@ -30,15 +30,25 @@ export class CompanyService {
    
   }
 
-  addCompany(company: Company): Observable<Company>{
-    return this.http.post<Company>('http://localhost:8080/api/company/save', company, httpOptions);
+  addCompany(company: Company,cityName:string|null|undefined): Observable<Company>{
+    return this.http.post<Company>("http://localhost:8080/api/company/save?cityName="+cityName, company);
   }
 
-  // create(company: Company): Observable<Company> {
-  //   return this.http.post<Company>(`http://localhost:3000/companys`, company);
-  // }
+
 
   deleteItemById(id: number): Observable<void> {
-    return this.http.delete<void>(`http://localhost:3000/companys` + '/' + id);
+    return this.http.delete<void>(`http://localhost:8080/api/company/delete` + '/' + id);
   }
+
+  consultCompany(id: number): Observable<Company> {
+    return this.http.get<Company>("http://localhost:8080/api/company" + '/' + id);
+  }
+
+  updateCompany(company: Company,cityName:string|null|undefined): Observable<Company>{
+    return this.http.put<Company>("http://localhost:8080/api/company/save?cityName="+cityName, company);
+  }
+
+  // updateCompany(comp: Company) : Observable<Company> {
+  //   return this.http.put<Company>("http://localhost:8080/api/company/save", comp);
+  // }
 }

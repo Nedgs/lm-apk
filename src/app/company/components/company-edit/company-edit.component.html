@@ -1,0 +1,30 @@
+<div class="container-form">
+    <div>
+        <h2>Modifier une entreprise</h2>
+    </div>
+    <form  class="form-general">
+  
+      <div class="input-container">
+          <label>Nom de l’entreprise</label>
+          <input [(ngModel)]="currentCompany.name" name="name" type="text" class="input-add-menu">
+      </div>
+  
+      <div class="input-container">
+          <label>Téléphone</label>
+          <input [(ngModel)]="currentCompany.phone" name="phone" type="text" class="input-add-menu">
+      </div>
+  
+      <div class="input-container">
+          <label>Ville</label>
+          <input [(ngModel)]="updatedCityId"  name="nameCity" type="text" class="input-add-menu">
+      </div>
+  
+      <div class="button-container">
+          <button  class="btn btn-add-menu back">Retour</button>
+          <button (click)="updateCompany()" class="btn btn-add-menu validate">Valider</button>
+      </div>
+  
+    </form>
+  </div>
+  
+  

@@ -6,13 +6,14 @@ import { CompanyRoutingModule } from './company-routing.module';
 import { CompanyFormComponent } from './components/company-form/company-form.component';
 import { CompanyAddComponent } from './components/company-add/company-add.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { CompanyEditComponent } from './components/company-edit/company-edit.component';
 
 
 
 @NgModule({
-  declarations: [CompanyListComponent, CompanyFormComponent, CompanyAddComponent],
+  declarations: [CompanyListComponent, CompanyFormComponent, CompanyAddComponent, CompanyEditComponent],
   imports: [
     CommonModule,
     MaterialModule,
@@ -20,7 +21,7 @@ import { SharedModule } from '../shared/shared.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
   ],
   exports: [
 
