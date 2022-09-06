@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { Company } from 'src/app/shared/models/company';
+import { Sector } from 'src/app/shared/models/sector';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application.json'})
@@ -30,8 +31,8 @@ export class CompanyService {
    
   }
 
-  addCompany(company: Company,cityName:string|null|undefined): Observable<Company>{
-    return this.http.post<Company>("http://localhost:8080/api/company/save?cityName="+cityName, company);
+  addCompany(company: Company,cityName:string|null|undefined, sectorId:string|null|undefined): Observable<Company>{
+    return this.http.post<Company>("http://localhost:8080/api/company/save?cityName="+cityName+"&sectorId="+sectorId, company);
   }
 
 
@@ -44,8 +45,12 @@ export class CompanyService {
     return this.http.get<Company>("http://localhost:8080/api/company" + '/' + id);
   }
 
-  updateCompany(company: Company,cityName:string|null|undefined): Observable<Company>{
-    return this.http.put<Company>("http://localhost:8080/api/company/save?cityName="+cityName, company);
+  updateCompany(company: Company,cityName:string|null|undefined,  sectorId:string|null|undefined): Observable<Company>{
+    return this.http.put<Company>("http://localhost:8080/api/company/save?cityName="+cityName+"&sectorId="+sectorId, company);
+  }
+
+  listSectors():Observable<Sector[]> {
+    return this.http.get<Sector[]>("http://localhost:8080/api/sec");
   }
 
   // updateCompany(comp: Company) : Observable<Company> {

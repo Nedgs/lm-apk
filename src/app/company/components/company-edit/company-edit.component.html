@@ -18,6 +18,15 @@
           <label>Ville</label>
           <input [(ngModel)]="updatedCityId"  name="nameCity" type="text" class="input-add-menu">
       </div>
+
+      <div class="input-container">
+        <label>Secteur</label>
+        <select [(ngModel)]="updatedSectorId" id="id" name="idSector" type="text" class="input-add-menu">
+            <option *ngFor="let sec of sectors" [value]="sec.id">
+                {{sec.name}}
+            </option>
+        </select>
+    </div>
   
       <div class="button-container">
           <button  class="btn btn-add-menu back">Retour</button>

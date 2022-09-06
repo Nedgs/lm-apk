@@ -19,6 +19,20 @@
         <input formControlName="city" type="text" class="input-add-menu">
     </div>
 
+    <div class="input-container">
+        <label>Secteur</label>
+        <select formControlName="sector" type="text" class="input-add-menu">
+            <option *ngFor="let sec of sectors" [value]="sec.id">
+                {{sec.name}}
+            </option>
+        </select>
+    </div>
+
+    <!-- <div class="input-container">
+        <label>Secteur</label>
+        <input formControlName="sector" type="text" class="input-add-menu">
+    </div> -->
+
     <div class="button-container">
         <button  class="btn btn-add-menu back">Retour</button>
         <button (click)="addCompany()" class="btn btn-add-menu validate">Valider</button>
