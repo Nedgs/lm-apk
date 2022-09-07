@@ -12,7 +12,7 @@ import { CompanyService } from '../../services/company.service';
 })
 export class CompanyListComponent implements OnInit {
 
-  displayedColumns : string[] = ['entreprise', 'date', 'telephone', 'ville', 'secteur', 'action'];
+  displayedColumns : string[] = ['entreprise', 'date', 'telephone', 'ville', 'pays', 'secteur', 'action'];
   dataSource!:MatTableDataSource<any>;
 
   @ViewChild('paginator') paginator! : MatPaginator;
@@ -27,6 +27,7 @@ export class CompanyListComponent implements OnInit {
       this.dataSource = new MatTableDataSource(response);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.matSort;
+      console.log(response);
 
 
     });
