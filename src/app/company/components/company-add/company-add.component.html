@@ -20,6 +20,15 @@
     </div>
 
     <div class="input-container">
+        <label>Pays/Région</label>
+        <select formControlName="country" type="text" class="input-add-menu">
+            <option *ngFor="let coun of countries" [value]="coun.id">
+                {{coun.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="input-container">
         <label>Secteur</label>
         <select formControlName="sector" type="text" class="input-add-menu">
             <option *ngFor="let sec of sectors" [value]="sec.id">
