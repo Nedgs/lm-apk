@@ -27,7 +27,7 @@ export class CompanyListComponent implements OnInit {
       this.dataSource = new MatTableDataSource(response);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.matSort;
-      console.log(response);
+      // console.log(response);
 
 
     });

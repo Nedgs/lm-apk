@@ -39,13 +39,13 @@ export class CompanyEditComponent implements OnInit {
     this.companyService.listSectors().
     subscribe( sects => {
       this.sectors = sects;
-      console.log(sects);
+      // console.log(sects);
     })
 
     this.companyService.listCountries().
     subscribe( count => {
       this.countries = count;
-      console.log(count);
+      // console.log(count);
     })
 
     this.companyService.consultCompany(this.activateRoute.snapshot.params['id']).subscribe(
@@ -53,7 +53,9 @@ export class CompanyEditComponent implements OnInit {
       this.updatedCityId = this.currentCompany.city?.name;
       this.updatedSectorId = this.currentCompany.sector?.id;
       this.updatedCountryId = this.currentCompany.city?.country?.id;
+      console.log(this.currentCompany);
      }
+     
     );
   }
 

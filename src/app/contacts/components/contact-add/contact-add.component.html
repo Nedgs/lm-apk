@@ -1,0 +1,31 @@
+<div class="container-form">
+    <div>
+        <h2>Ajouter une contact</h2>
+    </div>
+    <form [formGroup]="addContactForm" action="POST" class="form-general">
+  
+      <div class="input-container">
+          <label>Nom é prénom</label>
+          <input formControlName="name" type="text" class="input-add-menu">
+      </div>
+
+      <div class="input-container">
+        <label>Email</label>
+        <input formControlName="email" type="text" class="input-add-menu">
+    </div>
+  
+      <div class="input-container">
+          <label>Téléphone</label>
+          <input formControlName="phone" type="text" class="input-add-menu">
+      </div>
+  
+  
+      <div class="button-container">
+          <button  class="btn btn-add-menu back" routerLink="/contacts">Retour</button>
+          <button (click)="addContact()" class="btn btn-add-menu validate">Valider</button>
+      </div>
+  
+    </form>
+  </div>
+  
+  

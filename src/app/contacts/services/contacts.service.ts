@@ -21,7 +21,35 @@ export class ContactsService {
 
   getListContacts() {
 
-    return this.http.get('http://localhost:3000/contacs')
+    return this.http.get('http://localhost:8080/api/pros/contacts');
    
   }
+
+  addContact(contact: Contact): Observable<Contact>{
+    return this.http.post<Contact>("http://localhost:8080/api/pros/contact/save", contact);
+  }
+
+
+
+  deleteItemById(id: number): Observable<void> {
+    return this.http.delete<void>(`http://localhost:8080/api/pros/contact/delete` + '/' + id);
+  }
+
+  consultContact(id: number): Observable<Contact> {
+    return this.http.get<Contact>("http://localhost:8080/api/pros/contact" + '/' + id);
+  }
+
+  updateContact(contact: Contact): Observable<Contact>{
+    return this.http.post<Contact>("http://localhost:8080/api/pros/contact/save", contact);
+  }
+
+  
+  // listSectors():Observable<Sector[]> {
+  //   return this.http.get<Sector[]>("http://localhost:8080/api/sec");
+  // }
+
+  // listCountries():Observable<Country[]> {
+  //   return this.http.get<Country[]>("http://localhost:8080/api/coun");
+  // }
+
 }

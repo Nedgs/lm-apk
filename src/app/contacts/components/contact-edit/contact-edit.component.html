@@ -1,0 +1,29 @@
+<div class="container-form">
+    <div>
+        <h2>Modifier un contact</h2>
+    </div>
+    <form class="form-general">
+
+        <div class="input-container">
+            <label>Nom & prénom</label>
+            <input [(ngModel)]="currentContact.name" name="name" type="text" class="input-add-menu">
+        </div>
+
+        <div class="input-container">
+            <label>Email</label>
+            <input [(ngModel)]="currentContact.email" name="email" type="text" class="input-add-menu">
+        </div>
+
+        <div class="input-container">
+            <label>Téléphone</label>
+            <input [(ngModel)]="currentContact.phone" name="phone" type="text" class="input-add-menu">
+        </div>
+
+
+        <div class="button-container">
+            <button class="btn btn-add-menu back" routerLink="/contacts">Retour</button>
+            <button (click)="updateContact()" class="btn btn-add-menu validate">Valider</button>
+        </div>
+
+    </form>
+</div>

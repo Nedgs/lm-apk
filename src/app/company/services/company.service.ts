@@ -46,10 +46,11 @@ export class CompanyService {
     return this.http.get<Company>("http://localhost:8080/api/company" + '/' + id);
   }
 
-  updateCompany(company: Company,cityName:string|null|undefined,  sectorId:number|null|undefined, countryId:string|null|undefined): Observable<Company>{
-    return this.http.put<Company>("http://localhost:8080/api/company/save?cityName="+cityName+"&sectorId="+sectorId+"&countryId="+countryId, company);
+  updateCompany(company: Company,cityName:string|null|undefined, sectorId:number|null|undefined, countryId:string|null|undefined): Observable<Company>{
+    return this.http.post<Company>("http://localhost:8080/api/company/save?cityName="+cityName+"&sectorId="+sectorId+"&countryId="+countryId, company);
   }
 
+  
   listSectors():Observable<Sector[]> {
     return this.http.get<Sector[]>("http://localhost:8080/api/sec");
   }
@@ -58,7 +59,5 @@ export class CompanyService {
     return this.http.get<Country[]>("http://localhost:8080/api/coun");
   }
 
-  // updateCompany(comp: Company) : Observable<Company> {
-  //   return this.http.put<Company>("http://localhost:8080/api/company/save", comp);
-  // }
+ 
 }
