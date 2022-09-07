@@ -1,15 +1,14 @@
 
 
-export interface Contact {
-    id: number | null;
-    name: string | null;
-    email: string | null;
-    phone: string;
-    owner: string;
-    company: string;
-    date: string;
-    lifeCycle: string;
-   
+export class Contact {
+    id! : number;
+    name! : string| null|undefined;
+    email! : string| null|undefined;
+    phone! : string|null|undefined
+    createdAt? : Date | null;
+    updatedAt? : Date | null;
+
+    
   
   }
   
