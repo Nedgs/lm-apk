@@ -18,6 +18,15 @@
           <label>Téléphone</label>
           <input formControlName="phone" type="text" class="input-add-menu">
       </div>
+
+      <div class="input-container">
+        <label>Cycle de vie</label>
+        <select formControlName="lifecycle" type="text" class="input-add-menu">
+            <option *ngFor="let lifec of lifecycles" [value]="lifec.id">
+                {{lifec.name}}
+            </option>
+        </select>
+    </div>
   
   
       <div class="button-container">

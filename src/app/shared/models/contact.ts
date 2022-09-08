@@ -1,3 +1,4 @@
+import { Lifecycle } from "./lifecycle";
 
 
 export class Contact {
@@ -7,6 +8,7 @@ export class Contact {
     phone! : string|null|undefined
     createdAt? : Date | null;
     updatedAt? : Date | null;
+    lifecycle? : Lifecycle| null;
 
     
   

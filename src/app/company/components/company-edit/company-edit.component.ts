@@ -53,7 +53,6 @@ export class CompanyEditComponent implements OnInit {
       this.updatedCityId = this.currentCompany.city?.name;
       this.updatedSectorId = this.currentCompany.sector?.id;
       this.updatedCountryId = this.currentCompany.city?.country?.id;
-      console.log(this.currentCompany);
      }
      
     );

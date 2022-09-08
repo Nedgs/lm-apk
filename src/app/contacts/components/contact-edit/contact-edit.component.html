@@ -19,6 +19,15 @@
             <input [(ngModel)]="currentContact.phone" name="phone" type="text" class="input-add-menu">
         </div>
 
+        <div class="input-container">
+            <label>Cycle de vie</label>
+            <select [(ngModel)]="updatedLifecyclesId" id="id" name="idLifecycle" type="text" class="input-add-menu">
+                <option *ngFor="let lifec of lifecycles" [value]="lifec.id">
+                    {{lifec.name}}
+                </option>
+            </select>
+        </div>
+
 
         <div class="button-container">
             <button class="btn btn-add-menu back" routerLink="/contacts">Retour</button>
