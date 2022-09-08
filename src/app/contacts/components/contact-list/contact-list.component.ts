@@ -10,7 +10,7 @@ import { ContactsService } from '../../services/contacts.service';
 })
 export class ContactListComponent implements OnInit {
 
-  displayedColumns : string[] = ['nom', 'email', 'telephone' , 'dateCrea', 'dateUp', 'cycle', 'action'];
+  displayedColumns : string[] = ['nom', 'email', 'telephone' , 'entreprise', 'dateCrea', 'dateUp', 'cycle', 'action'];
   dataSource!:MatTableDataSource<any>;
 
   @ViewChild('paginator') paginator! : MatPaginator;

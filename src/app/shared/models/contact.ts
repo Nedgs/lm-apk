@@ -1,3 +1,4 @@
+import { Company } from "./company";
 import { Lifecycle } from "./lifecycle";
 
 
@@ -9,6 +10,7 @@ export class Contact {
     createdAt? : Date | null;
     updatedAt? : Date | null;
     lifecycle? : Lifecycle| null;
+    company? : Company| null;
 
     
   

@@ -20,6 +20,15 @@
         </div>
 
         <div class="input-container">
+            <label>Entreprise</label>
+            <select [(ngModel)]="updatedCompanyId" id="id" name="idEntreprise" type="text" class="input-add-menu">
+                <option *ngFor="let comp of companys" [value]="comp.id">
+                    {{comp.name}}
+                </option>
+            </select>
+        </div>
+
+        <div class="input-container">
             <label>Cycle de vie</label>
             <select [(ngModel)]="updatedLifecyclesId" id="id" name="idLifecycle" type="text" class="input-add-menu">
                 <option *ngFor="let lifec of lifecycles" [value]="lifec.id">

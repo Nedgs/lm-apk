@@ -59,5 +59,9 @@ export class CompanyService {
     return this.http.get<Country[]>("http://localhost:8080/api/coun");
   }
 
+  listCompanyfor():Observable<Company[]> {
+    return this.http.get<Company[]>("http://localhost:8080/api/companys");
+  }
+
  
 }

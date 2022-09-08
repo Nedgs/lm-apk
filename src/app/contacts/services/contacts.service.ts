@@ -26,8 +26,8 @@ export class ContactsService {
    
   }
 
-  addContact(contact: Contact, lifecycleId:string|null|undefined): Observable<Contact>{
-    return this.http.post<Contact>("http://localhost:8080/api/pros/contact/save?lifecycleId="+lifecycleId, contact);
+  addContact(contact: Contact, lifecycleId:string|null|undefined, companyId:string|null|undefined): Observable<Contact>{
+    return this.http.post<Contact>("http://localhost:8080/api/pros/contact/save?lifecycleId="+lifecycleId+"&companyId="+companyId, contact);
   }
 
 
@@ -40,8 +40,8 @@ export class ContactsService {
     return this.http.get<Contact>("http://localhost:8080/api/pros/contact" + '/' + id);
   }
 
-  updateContact(contact: Contact, lifecycleId:string|null|undefined): Observable<Contact>{
-    return this.http.post<Contact>("http://localhost:8080/api/pros/contact/save?lifecycleId="+lifecycleId, contact);
+  updateContact(contact: Contact, lifecycleId:number|null|undefined, companyId:string|null|undefined): Observable<Contact>{
+    return this.http.post<Contact>("http://localhost:8080/api/pros/contact/save?lifecycleId="+lifecycleId+"&companyId="+companyId, contact);
   }
 
 
@@ -49,6 +49,7 @@ export class ContactsService {
   listLifecycles():Observable<Lifecycle[]> {
     return this.http.get<Lifecycle[]>("http://localhost:8080/api/lifec");
   }
+  
 
   // listCountries():Observable<Country[]> {
   //   return this.http.get<Country[]>("http://localhost:8080/api/coun");
