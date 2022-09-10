@@ -28,6 +28,16 @@ const routes: Routes = [
       .then(m => m.UsersModule)
   },
   {
+    path: 'login',
+    loadChildren: () => import('./login/login.module')
+      .then(m => m.LoginModule)
+  },
+  {
+    path: 'forbidden',
+    loadChildren: () => import('./forbidden/forbidden.module')
+      .then(m => m.ForbiddenModule)
+  },
+  {
     path: '', pathMatch: 'full', redirectTo: "dashboard"
   }
 

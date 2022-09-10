@@ -10,6 +10,7 @@ import { registerLocaleData } from '@angular/common';
 import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import localeFr from '@angular/common/locales/fr';
+import { LoginModule } from './login/login.module';
 
 registerLocaleData(localeFr);
 
@@ -27,7 +28,8 @@ registerLocaleData(localeFr);
     BrowserAnimationsModule,
     MaterialModule,
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
+    LoginModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'fr-FR' }, DatePipe],
   bootstrap: [AppComponent]

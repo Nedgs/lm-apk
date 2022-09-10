@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { UsersListComponent } from './components/users-list/users-list.component';
-import { UsersGuard } from '../users.guard';
+import { LoginComponent } from './components/login/login.component';
+
 
 const routes: Routes = [
-  {path: '', component: UsersListComponent, canActivate:[UsersGuard]},
-  
+  {path: '', component: LoginComponent},
+
 
 ];
 
@@ -18,4 +18,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class UsersRoutingModule { }
+export class LoginRoutingModule { }

@@ -1,9 +1,10 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { BehaviorSubject, catchError, Observable, of } from 'rxjs';
 import { Company } from 'src/app/shared/models/company';
 import { Country } from 'src/app/shared/models/country';
 import { Sector } from 'src/app/shared/models/sector';
+import { throwError } from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application.json'})
@@ -41,6 +42,8 @@ export class CompanyService {
   deleteItemById(id: number): Observable<void> {
     return this.http.delete<void>(`http://localhost:8080/api/company/delete` + '/' + id);
   }
+
+
 
   consultCompany(id: number): Observable<Company> {
     return this.http.get<Company>("http://localhost:8080/api/company" + '/' + id);
