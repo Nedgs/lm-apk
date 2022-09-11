@@ -1,11 +1,11 @@
 <mat-drawer-container>
 
-  <mat-drawer mode="side" [opened]="sideBarOpen" *ngIf="authService.isloggedIn">
+  <mat-drawer mode="side" [opened]="sideBarOpen" *ngIf="authService.token!=null">
     <app-sidenav></app-sidenav>
   </mat-drawer>
 
   <mat-drawer-content>
-    <app-header *ngIf="authService.isloggedIn"  (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <app-header *ngIf="authService.token!= null"  (toggleSidebarForMe)="sideBarToggler()"></app-header>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 

@@ -8,9 +8,10 @@ import { MaterialModule } from './shared/material/material.module';
 import { CoreModule } from './core/core.module';
 import { registerLocaleData } from '@angular/common';
 import { DatePipe } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import localeFr from '@angular/common/locales/fr';
 import { LoginModule } from './login/login.module';
+import { TokenInterceptor } from './token.interceptor';
 
 registerLocaleData(localeFr);
 
@@ -31,7 +32,11 @@ registerLocaleData(localeFr);
     HttpClientModule,
     LoginModule
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'fr-FR' }, DatePipe],
+  providers: [
+    {provide: LOCALE_ID, useValue: 'fr-FR' }, 
+    DatePipe,
+    {provide : HTTP_INTERCEPTORS, useClass : TokenInterceptor, multi : true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
