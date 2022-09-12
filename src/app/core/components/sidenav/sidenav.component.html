@@ -22,14 +22,14 @@
     <h4>Contacts</h4>
   </a>
 
-  <a *ngIf="authService.isAdmin()" mat-list-item routerLink="/users" routerLinkActive="list-item-active">
+  <a *ngIf="authService.isAdmin() || authService.isManager() " mat-list-item routerLink="/users" routerLinkActive="list-item-active">
     <mat-icon>group</mat-icon>
     <h4>Utilisateurs</h4>
   </a>
 
   <h2 matSubheader class="mt-2 sec-2">APPS</h2>
 
-  <a mat-list-item routerLinkActive="list-item-active">
+  <a mat-list-item routerLinkActive="list-item-active" (click)="onLogout()">
     <mat-icon>logout</mat-icon>
     <h4>Déconnexion</h4>
   </a>

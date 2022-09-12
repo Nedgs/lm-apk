@@ -1,0 +1,38 @@
+<div class="container-form">
+    <div>
+        <h2>Modifier une contact</h2>
+    </div>
+    <form class="form-general">
+
+        <div class="input-container">
+            <label>Nom & prénom</label>
+            <input [(ngModel)]="currentUser.username" name="username" type="text" class="input-add-menu">
+        </div>
+
+        <div class="input-container">
+            <label>Email</label>
+            <input  [(ngModel)]="currentUser.email" name="email" type="text" class="input-add-menu">
+        </div>
+
+        <div class="input-container">
+            <label>Mot de passe</label>
+            <input  [(ngModel)]="currentUser.password" name="password" type="password" class="input-add-menu">
+        </div>
+
+        <div class="input-container">
+            <label>Role</label>
+            <select [(ngModel)]="currentUser.roles" name="role" type="text" class="input-add-menu">
+                <option *ngFor="let rol of roles" [value]="rol.role">
+                    {{rol.role}}
+                </option>
+            </select>
+        </div>
+
+
+        <div class="button-container">
+            <button class="btn btn-add-menu back" routerLink="/users">Retour</button>
+            <button (click)="updateUser()" class="btn btn-add-menu validate">Valider</button>
+        </div>
+
+    </form>
+</div>

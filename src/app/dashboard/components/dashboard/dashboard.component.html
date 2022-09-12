@@ -5,9 +5,9 @@
     </div>
 
     <div class="text-box">
-      <h2>Bonjour Nader</h2>
+      <h2>Bonjour {{authService.loggedUser}}</h2>
       <p>Bienvenue à bord chez les Prismonautes !</p>
-      <p>{{date}}</p>
+      <p>{{date | date:'MMM d, y, h:mm:ss a'}}</p>
     </div>
   </div>
 
@@ -39,7 +39,7 @@
     <div class="card">
       <mat-icon class="settings-image-icon ">logout</mat-icon>
       <h2>Déconnexion</h2>
-      <a href="#">
+      <a href="" (click)="onLogout()">
         <mat-icon class="user-image-icon ">arrow_forward</mat-icon>
       </a>
     </div>

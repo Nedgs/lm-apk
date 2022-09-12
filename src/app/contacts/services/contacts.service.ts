@@ -49,15 +49,11 @@ export class ContactsService {
   }
 
   consultContact(id: number): Observable<Contact> {
-
-    
-
     return this.http.get<Contact>("http://localhost:8080/api/pros/contact" + '/' + id);
   }
 
   updateContact(contact: Contact, lifecycleId:number|null|undefined, companyId:string|null|undefined): Observable<Contact>{
 
-  
 
     return this.http.post<Contact>("http://localhost:8080/api/pros/contact/save?lifecycleId="+lifecycleId+"&companyId="+companyId, contact);
   }

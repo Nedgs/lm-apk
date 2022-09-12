@@ -13,4 +13,8 @@ export class SidenavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onLogout() {
+    this.authService.logout();
+  }
+
 }

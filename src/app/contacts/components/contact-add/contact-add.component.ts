@@ -62,6 +62,7 @@ export class ContactAddComponent implements OnInit {
     this.contact.phone = this.addContactForm.value.phone?.toString();
     this.lifecycle = this.addContactForm.value.lifecycle?.toString();
     this.company = this.addContactForm.value.company?.toString();
+    
   }
 
   ngOnInit(): void {

@@ -92,6 +92,11 @@ export class AuthService {
     return this.roles.indexOf("ADMIN") >= 0;
   }
 
+  isManager(): Boolean {
+    if (!this.roles) return false;
+    return this.roles.indexOf("MANAGER") >= 0;
+  }
+
   // isManager(): Boolean {
   //   if (!this.roles) return false;
   //   return this.roles.indexOf("MANAGER") >= 0;

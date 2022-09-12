@@ -1,0 +1,38 @@
+<div class="container-form">
+    <div>
+        <h2>Ajouter une contact</h2>
+    </div>
+    <form [formGroup]="addUserForm" action="POST" class="form-general">
+
+        <div class="input-container">
+            <label>Nom & prénom</label>
+            <input formControlName="username" type="text" class="input-add-menu">
+        </div>
+
+        <div class="input-container">
+            <label>Email</label>
+            <input formControlName="email" type="text" class="input-add-menu">
+        </div>
+
+        <div class="input-container">
+            <label>Mot de passe</label>
+            <input formControlName="password" type="text" class="input-add-menu">
+        </div>
+
+        <div class="input-container">
+            <label>Role</label>
+            <select formControlName="role" type="text" class="input-add-menu">
+                <option *ngFor="let rol of roles" [value]="rol.role">
+                    {{rol.role}}
+                </option>
+            </select>
+        </div>
+
+
+        <div class="button-container">
+            <button class="btn btn-add-menu back" routerLink="/users">Retour</button>
+            <button (click)="addUser()" class="btn btn-add-menu validate">Valider</button>
+        </div>
+
+    </form>
+</div>
