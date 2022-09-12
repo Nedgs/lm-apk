@@ -100,3 +100,20 @@
    
   }
 }
+
+@media (max-width: 1017px) { 
+  .welcome-container{
+    width: 100% !important;
+  }
+  .card-container{
+    flex-direction: column;
+
+    .card{
+      margin-bottom: 20px;
+    }
+
+    .card:last-child{
+      margin-bottom: 0px;
+    }
+  }
+}
